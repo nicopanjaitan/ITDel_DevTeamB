@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "inventory")
 public class Inventory {
     @Id
-    ObjectId _id;
+    String _id;
 
     @Indexed(unique = true)
     private String name;
@@ -29,11 +29,11 @@ public class Inventory {
         this.stock = _stock;
     }
 
-    public ObjectId get_id() {
+    public String get_id() {
         return _id;
     }
 
-    public void set_id(ObjectId _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 
