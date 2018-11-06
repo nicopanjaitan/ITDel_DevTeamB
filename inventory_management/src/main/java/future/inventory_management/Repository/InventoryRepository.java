@@ -8,6 +8,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface InventoryRepository extends MongoRepository<Inventory, String> {
-    //selalu error kalau digunakan
-    //Inventory _findById(ObjectId _invId);
+    Inventory findBy_id(String _id);
 }
